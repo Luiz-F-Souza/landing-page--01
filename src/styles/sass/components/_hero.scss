@@ -1,0 +1,58 @@
+@use "mixins" as *;
+@use "variables" as vrb;
+
+.hero{
+  
+
+ @include maxWidth192;
+  
+
+  .container--hero-img{
+
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 77%, 0 98%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 77%, 0 98%);
+    
+    
+      width: 100%; 
+    img{
+      width: 100%;
+    }
+  }
+
+  .container--hero-text-and-btn{
+
+    position: absolute;
+    margin-left: 9rem;
+    top: 26rem;
+
+    .h1{
+      font-weight: 700; //variavel
+      font-size: 4.8rem; //variavel
+      line-height: 5.28rem; //variavel
+      color: vrb.$color-text-primary;
+      margin-bottom: 2rem;
+    }
+
+    p{
+      font-weight: 400;
+      font-size: 2.8rem;
+      line-height: 3.36rem;
+      color: vrb.$color-text-primary; 
+      margin-bottom: 6rem;
+    }
+
+    .btn{
+
+      width: 30rem;
+      height: 6rem;
+      color: vrb.$color-text-primary; 
+      background-color: vrb.$color-primary ; 
+      border-radius: 100px;
+
+      text-transform: uppercase;
+     
+    }
+
+  }
+
+}

@@ -1,0 +1,71 @@
+@use "mixins" as *;
+@use "variables" as vrb;
+
+.header{  
+
+  @include maxWidth192;
+  display: flex;
+  padding: 3.5rem 9rem;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px) saturate(180%);
+  
+  
+  
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  .container--img-logo{
+    max-width: 19.2rem;
+
+    a{
+      .img-logo{
+        width: 100%;
+      }
+    }
+    
+  }
+ 
+
+  .icon-menu{
+
+    .mobile-menu{
+      display: none;
+      width: 5rem;
+      height: 5rem;
+    }
+  
+  }
+
+  .main-nav{
+   
+    .main-nav--ul{
+      display: flex;
+      column-gap: 4rem;
+      .main-nav--li{
+        
+
+        .text{
+          font-size: 2.8rem;
+          font-weight: 700;
+          color: vrb.$color-text-primary; 
+          text-decoration: none;
+
+          &:hover{
+            color: vrb.$color-primary; 
+          }
+        }
+      }
+    }
+
+
+
+  }
+
+
+}

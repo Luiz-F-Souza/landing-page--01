@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "sass": "^1.53.0"
+  },
+  "name": "modelo-01",
+  "version": "1.0.0",
+  "description": "Landing Page model",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "compiler-sass": "sass src/styles/sass/index.scss src/styles/css/style.css -w"
+  },
+  "author": "Design: Milena Santos. Programmer: Luiz Felipe de Souza Barbosa",
+  "license": "ISC"
+}

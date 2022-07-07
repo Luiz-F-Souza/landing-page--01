@@ -1,0 +1,180 @@
+@use "variables" as vrb;
+
+.main{
+
+  background-image: url("public/images/hero-img.png");
+  width: 100%;
+  
+  .about-us{
+    
+    .p{
+      font-size: 1.6rem; //variavel
+      font-weight: 700; //variavel
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      line-height: 2.4rem;
+      color: vrb.$color-primary;
+      text-align: center;
+    }
+
+    .h2{
+      font-size: 4rem; //variavel
+      font-weight: 700;
+      line-height: 4.4rem;
+      text-align: center;
+      margin-bottom: 9rem;
+    }
+
+
+    .cards--about-us{
+      display: grid;
+      grid-template-columns: repeat(3, 30rem);
+      margin-bottom: 16.5rem;
+      
+      justify-content: center;
+      column-gap: 2rem;
+    
+      .card{
+        text-align: center;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+
+        img{
+          margin-top: 6rem;
+          margin-bottom: 4rem;
+
+          width: 7rem;
+        }
+
+        .h4{
+          margin-bottom: 6rem; //variavel
+          font-size: 2.3rem;
+          font-weight: 700;
+          line-height: 2.76rem;
+          color: vrb.$color-secondary; 
+
+        }
+
+        .p{
+          margin-bottom: 6rem; //variavel
+          font-size: 1.6rem; //variavel
+          font-weight: 400;
+          line-height: 2.4rem;
+          color: vrb.$color-secondary;
+        }
+      }
+    } 
+  }
+
+
+
+  .how-it-works{
+    text-align: center;
+    width: 100%;  
+    .h2{
+      font-size: 4rem;
+      line-height: 4.4rem;
+      font-weight: 700;
+      text-align: center;
+      position: relative;
+      
+
+      &::after{
+        content: "";
+        width: 19.4rem;
+        height: 1.4rem;
+        background-color: vrb.$color-secondary; 
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 5px;
+      }
+    }
+
+    .img--how-it-works{
+      width: 100%;
+      text-align: center;
+
+      picture{
+
+        img{
+          width: 85%;
+          max-width: 100rem;
+        }
+      } 
+    }
+
+    .btn--cta{
+      
+      border: 2px solid vrb.$color-primary;              
+      background-color: transparent;
+      color: vrb.$color-primary;              
+      width: 40rem;
+      height: 6rem;
+      text-transform: uppercase;
+      transition: all .35s ease-in-out;
+      margin-bottom: 10.3rem;
+
+      &:hover{
+        transform: none;
+        color: white;
+        background-color: vrb.$color-primary;              
+        border: none;
+        
+      }
+    }
+  }
+
+  .see-our-history{
+    display: grid;
+    grid-template-areas: 'img img  txt txt txt';
+    padding: 0 9rem;
+
+    .img{
+      grid-area: img;
+      
+
+      img{
+        width: 100%;
+      }
+    }
+
+    .our-history-text{
+      grid-area: txt;
+
+      .h4{
+        font-size: 4rem;//variavel
+        font-weight: 700;//variavel
+        line-height: 4rem; //variavel
+        margin-bottom: 1rem;
+      }
+
+      .p{
+        font-size: 1.6rem;//variavel
+        font-weight: 400;
+        line-height: 2.4rem;
+        margin-bottom: 2rem;
+      }
+
+      .btn{
+        background-color: transparent;
+        color: vrb.$color-primary;
+        margin-bottom: 8rem;
+      }
+    }
+  }
+
+
+  .maps{
+    margin-bottom: 3rem;
+    width: 100%;
+
+    iframe{
+      
+      width: 100%;
+      height: 51.5rem;
+
+    }
+  }
+}

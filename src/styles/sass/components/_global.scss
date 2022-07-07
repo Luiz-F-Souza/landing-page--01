@@ -1,0 +1,67 @@
+@use "variables" as vrb;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scroll-padding-top: 15rem;
+ ::-webkit-scrollbar{
+  width: 0;
+  
+ }
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: vrb.$color-secondary;
+  background-color: #FFFAFF;
+  width: 100%;
+  
+
+  overflow-x: hidden;
+}
+
+.text{
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn{
+  border: none;
+  outline: none;
+  font-size: 1.9rem;
+  line-height: 120%;
+  font-weight: 700;
+  
+
+  &:hover{
+    cursor: pointer;
+    transform: perspective(100px) translateZ(2px);
+  }
+
+  &:active{
+    transform: perspective(100px) translateZ(.5px);
+  }
+}
+
+.hidden{
+  display: none !important;
+}
+
+.li{
+  list-style: none;
+  :hover{
+    cursor: pointer;
+  }
+}
+
+
+
+
