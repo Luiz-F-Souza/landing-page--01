@@ -6,10 +6,23 @@
   "version": "1.0.0",
   "description": "Landing Page model",
   "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "compiler-sass": "sass src/styles/sass/index.scss src/styles/css/style.css -w"
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.12",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0"
   },
-  "author": "Design: Milena Santos. Programmer: Luiz Felipe de Souza Barbosa",
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "> 0.2%"
+  ],
+  "scripts": {
+    "compiler-sass": "sass src/styles/sass/index.scss src/styles/css/style.css -w",
+    "autoprefixer": "postcss src/styles/css/style.css --use autoprefixer -d src/styles/css/autoprefixer"
+  },
+  "author": "Design: Milena Campos. Programmer: Luiz Felipe de Souza Barbosa",
   "license": "ISC"
 }
