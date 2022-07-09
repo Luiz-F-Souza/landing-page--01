@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,6 +11,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scroll-padding-top: 15rem;
+  height: -webkit-fill-available;
 }
 html ::-webkit-scrollbar {
   width: 0;
@@ -57,9 +60,11 @@ body {
   top: 0;
   width: 100vw;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   background-color: rgba(87, 87, 87, 0.71);
   backdrop-filter: blur(5px);
   z-index: 999;
+  overflow: scroll;
 }
 .container--form--full .div {
   box-shadow: 0px -8px 6px rgba(0, 0, 0, 0.1);
@@ -229,7 +234,7 @@ body {
   max-width: 192rem;
   width: 100%;
   display: flex;
-  padding: 3.5rem 9rem;
+  padding: 2rem 9rem;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.787);
@@ -239,7 +244,7 @@ body {
   left: 0;
 }
 .header .container--img-logo {
-  max-width: 19.2rem;
+  max-width: 15.2rem;
 }
 .header .container--img-logo a .img-logo {
   width: 100%;
@@ -333,6 +338,7 @@ body {
 .main .about-us .cards--about-us .card {
   text-align: center;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  padding: 0 1rem;
 }
 .main .about-us .cards--about-us .card img {
   margin-top: 6rem;
@@ -441,7 +447,6 @@ body {
 
 .footer {
   background-color: #363837;
-  margin-bottom: 100rem;
   padding: 5rem 9rem;
 }
 .footer .footer--top-part {
@@ -572,6 +577,9 @@ body {
   #body .container--form--full .div .container--your-info-form .form .form-input-container input:not([type=radio]) {
     width: 35rem;
   }
+  #body .container--form--full .div .container--btns {
+    left: 90%;
+  }
 }
 @media (max-width: 1285px) {
   html {
@@ -594,7 +602,7 @@ body {
     width: 30rem;
   }
   #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container textarea {
-    width: 90%;
+    width: 85%;
   }
   #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset {
     display: grid;
@@ -617,7 +625,7 @@ body {
   #body .container--form--full .div .container--btns {
     flex-direction: row;
     column-gap: 5rem;
-    top: 95%;
+    top: 90%;
     left: 50%;
   }
 }
@@ -626,7 +634,8 @@ body {
     font-size: 43%;
   }
   #body .container--form--full .div {
-    min-width: 90vw;
+    width: 90vw;
+    padding: 0 1rem 5rem 1rem;
     max-height: max-content;
   }
   #body .container--form--full .div .container--your-info-form .form .about-change--fieldset {
@@ -693,16 +702,16 @@ body {
   #body .main-nav .main-nav--ul.active {
     left: 50%;
   }
-  #body .container--form--full {
-    overflow: auto;
-  }
   #body .container--form--full .div {
-    padding: 4rem 5rem 15rem 5rem;
-    max-height: max-content;
-    top: 50%;
+    padding: 0 5rem 20rem 5rem;
+    top: 400px;
+  }
+  #body .container--form--full .div .h2 {
+    margin-bottom: 2rem;
   }
   #body .container--form--full .div .container--progress-steps {
     flex-direction: column;
+    margin-bottom: 2rem;
   }
   #body .container--form--full .div .container--progress-steps .container--steps:not(:last-child) {
     margin-bottom: 20px;
@@ -735,6 +744,9 @@ body {
   }
   #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container input, #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container select, #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container textarea, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container input, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container select, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container textarea, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container input, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container select, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container textarea {
     width: 100% !important;
+  }
+  #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container textarea, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container textarea, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container textarea {
+    height: 80px;
   }
   #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container .radio-btn, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container .radio-btn, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container .radio-btn {
     flex-shrink: 0;
@@ -820,6 +832,9 @@ body {
 @media (max-width: 380px) {
   #body .header {
     padding: 3.5rem 5rem;
+  }
+  #body .container--form--full .div {
+    padding: 0 0.5rem 20rem 0.5rem;
   }
   .radio-btn span label {
     margin-left: 0 !important;

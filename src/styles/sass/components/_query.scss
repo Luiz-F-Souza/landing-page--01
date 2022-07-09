@@ -40,6 +40,10 @@
             }
           }
         }
+
+        .container--btns{
+          left: 90%;
+        }
       }
     }
   }
@@ -85,7 +89,7 @@
                 }
 
                 textarea{
-                  width: 90%;
+                  width: 85%;
                 }
               }
             }
@@ -126,7 +130,7 @@
           flex-direction: row;
           column-gap: 5rem;
 
-          top: 95%;
+          top: 90%;
           left: 50%;
           
         }
@@ -148,7 +152,8 @@
     .container--form--full{
 
       .div{
-        min-width: 90vw;
+        width: 90vw;
+        padding: 0 1rem 5rem 1rem;
         max-height: max-content;
         .container--your-info-form{
           
@@ -262,20 +267,21 @@
     }
 
     .container--form--full{
-      overflow: auto;
+      
+      
       
       
       .div{
 
-        padding: 4rem 5rem 15rem 5rem; 
+        padding: 0 5rem 20rem 5rem; 
+        top: 400px;
         
-        max-height: max-content;
-        top: 50%;
-        
-
+        .h2{
+          margin-bottom: 2rem;
+        }
         .container--progress-steps{
           flex-direction: column;
-          
+          margin-bottom: 2rem;
           .container--steps{
 
             &:not(:last-child){
@@ -325,14 +331,16 @@
                   width: 100% !important;  
                 }
 
+                textarea{
+                  height: 80px;
+                }
+
                 .radio-btn{
                   
                   flex-shrink: 0;
                  
                   span{
                     flex-shrink: 0;
-                    
-                    
                   }
                 }
               }
@@ -483,13 +491,19 @@
     .header{
       padding: 3.5rem 5rem;
     }
+
+    .container--form--full{
+
+      .div{
+        padding: 0 .5rem 20rem .5rem;
+      }
+    }
   }
 
   .radio-btn{
     span{
 
       label{
-        
         margin-left: 0 !important;
       }
     }

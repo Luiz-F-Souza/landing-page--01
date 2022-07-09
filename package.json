@@ -15,7 +15,7 @@
     "postcss-cli": "^10.0.0"
   },
   "browserslist": [
-    "last 2 versions",
+    "last 3 versions",
     "not dead",
     "> 0.2%"
   ],

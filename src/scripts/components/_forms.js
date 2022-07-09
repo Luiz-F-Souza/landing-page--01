@@ -35,8 +35,8 @@ function openModal(){
 
   formBody.classList.toggle("hidden")
     
-  !formBody.classList.contains("hidden") ? body.style.overflow = "hidden" : "" // just to prevent the background scrolling with modal open
-    
+  body.style.overflow = "hidden" // just to prevent the background scrolling with modal open
+  
 }
 
 // function that should run always that the modal needs to be closed

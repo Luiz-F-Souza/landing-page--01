@@ -5,7 +5,7 @@
 
   @include maxWidth192;
   display: flex;
-  padding: 3.5rem 9rem;
+  padding: 2rem 9rem;
   justify-content: space-between;
   align-items: center;
 
@@ -19,7 +19,7 @@
   left: 0;
 
   .container--img-logo{
-    max-width: 19.2rem;
+    max-width: 15.2rem;
 
     a{
       .img-logo{
