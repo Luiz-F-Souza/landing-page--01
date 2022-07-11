@@ -23,9 +23,11 @@ const forms = {
 
 }
 
-const body = document.querySelector("body")
+const body = document.getElementById('container--full-page')
 const btnBudget = document.querySelectorAll(".btn--cta-budget")
 const formBody = document.querySelector(".container--form--full")
+const inputs = document.querySelectorAll(".form-input-container")
+
 
 //---------------------------------------------------------------------------------------------------------------
 
@@ -34,14 +36,17 @@ const formBody = document.querySelector(".container--form--full")
 function openModal(){
 
   formBody.classList.toggle("hidden")
-    
+  
   body.style.overflow = "hidden" // just to prevent the background scrolling with modal open
+  body.style.height = "99vh"
   
 }
 
 // function that should run always that the modal needs to be closed
 function closeModal(){
-  body.style.overflow = ""
+  body.style.overflow = "scroll"
+  body.style.height= "auto"
+ 
   formBody.classList.add("hidden")
 }
 
@@ -54,6 +59,25 @@ function invalidCEP(){
   forms.cepInfo.cityInput.value = ""
   forms.cepInfo.provinceInput.value = ""
   forms.cepInfo.streetInput.value = ""
+}
+
+
+//function that submits all forms
+function toSubmitForms(){
+  
+  let formData = {}
+
+  inputs.forEach(el => {
+    
+    const inputLabel = el.children[0].textContent
+    const inputData = el.children[1].value
+    const itemToAdd = `${inputLabel}: ${inputData}`
+    
+    formData[inputLabel] = inputData
+    
+  })
+ 
+  console.log(formData)
 }
 
 //---------------------------------------------------------------------------------------------------------------
@@ -118,7 +142,7 @@ forms.btns.btnNext.addEventListener("click", e => {
 
       forms.svgFinish.classList.remove("hidden")
       
-      
+      toSubmitForms()
     }
     
     return

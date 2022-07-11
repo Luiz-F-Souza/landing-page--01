@@ -23,6 +23,11 @@ body {
   background-color: #FFFAFF;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
+}
+
+#container--full-page {
+  position: relative;
 }
 
 .text {
@@ -58,8 +63,11 @@ body {
 .container--form--full {
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   min-height: -webkit-fill-available;
   background-color: rgba(87, 87, 87, 0.71);
   backdrop-filter: blur(5px);
@@ -225,7 +233,7 @@ body {
   border-radius: 7px;
 }
 
-.form--localization #fieldset {
+.form--localization #localization--fieldset {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -242,6 +250,7 @@ body {
   z-index: 2;
   top: 0;
   left: 0;
+  right: 0;
 }
 .header .container--img-logo {
   max-width: 15.2rem;
@@ -269,6 +278,7 @@ body {
 }
 
 .hero {
+  position: relative;
   max-width: 192rem;
   width: 100%;
 }
@@ -283,7 +293,10 @@ body {
 .hero .container--hero-text-and-btn {
   position: absolute;
   margin-left: 9rem;
-  top: 26rem;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translate(0, -50%);
 }
 .hero .container--hero-text-and-btn .h1 {
   font-weight: 700;
@@ -472,7 +485,7 @@ body {
 }
 .footer .footer--top-part aside::after {
   content: "";
-  width: 0.2rem;
+  width: 0.1rem;
   height: 20.5rem;
   background-color: #F1F1F1;
   position: absolute;
@@ -558,26 +571,26 @@ body {
 }
 
 @media (max-width: 1445px) {
-  #body .container--form--full .div {
+  #body .container--full-page .container--form--full .div {
     max-width: 1270px;
     padding: 4rem 6rem;
   }
-  #body .container--form--full .div .h2 {
+  #body .container--full-page .container--form--full .div .h2 {
     font-size: 3rem;
   }
-  #body .container--form--full .div .container--progress-steps .container--steps {
+  #body .container--full-page .container--form--full .div .container--progress-steps .container--steps {
     column-gap: 0.8rem;
   }
-  #body .container--form--full .div .container--progress-steps .container--steps:not(:last-child)::after {
+  #body .container--full-page .container--form--full .div .container--progress-steps .container--steps:not(:last-child)::after {
     width: 10.5rem;
   }
-  #body .container--form--full .div .container--your-info-form .form .form-input-container textarea {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form .form-input-container textarea {
     width: 90%;
   }
-  #body .container--form--full .div .container--your-info-form .form .form-input-container input:not([type=radio]) {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form .form-input-container input:not([type=radio]) {
     width: 35rem;
   }
-  #body .container--form--full .div .container--btns {
+  #body .container--full-page .container--form--full .div .container--btns {
     left: 90%;
   }
 }
@@ -585,44 +598,44 @@ body {
   html {
     font-size: 56%;
   }
-  #body .container--form--full .div {
+  #body .container--full-page .container--form--full .div {
     max-width: 940px;
     padding: 3rem 4.5rem;
   }
-  #body .container--form--full .div .container--progress-steps .container--steps {
+  #body .container--full-page .container--form--full .div .container--progress-steps .container--steps {
     column-gap: 0.8rem;
   }
-  #body .container--form--full .div .container--progress-steps .container--steps:not(:last-child)::after {
+  #body .container--full-page .container--form--full .div .container--progress-steps .container--steps:not(:last-child)::after {
     width: 7.5rem;
   }
-  #body .container--form--full .div .container--your-info-form {
+  #body .container--full-page .container--form--full .div .container--your-info-form {
     padding-bottom: 10rem;
   }
-  #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container input:not([type=radio]) {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset .form-input-container input:not([type=radio]) {
     width: 30rem;
   }
-  #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container textarea {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset .form-input-container textarea {
     width: 85%;
   }
-  #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container input {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container input {
     width: 100%;
   }
-  #body .container--form--full .div .container--your-info-form .svg-finish svg {
+  #body .container--full-page .container--form--full .div .container--your-info-form .svg-finish svg {
     width: 12rem;
     height: 12rem;
     margin-bottom: 2rem;
   }
-  #body .container--form--full .div .container--your-info-form .svg-finish p {
+  #body .container--full-page .container--form--full .div .container--your-info-form .svg-finish p {
     margin-bottom: -2rem;
     font-size: 1.9rem;
     font-weight: 700;
     line-height: 2.28rem;
   }
-  #body .container--form--full .div .container--btns {
+  #body .container--full-page .container--form--full .div .container--btns {
     flex-direction: row;
     column-gap: 5rem;
     top: 90%;
@@ -633,15 +646,31 @@ body {
   html {
     font-size: 43%;
   }
-  #body .container--form--full .div {
+  #body .container--full-page .container--form--full .div {
     width: 90vw;
     padding: 0 1rem 5rem 1rem;
     max-height: max-content;
   }
-  #body .container--form--full .div .container--your-info-form .form .about-change--fieldset {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form .about-change--fieldset {
     grid-template-columns: repeat(2, 1fr);
   }
-  #body .footer--top-part::after {
+  #body .container--full-page .main .see-our-history {
+    grid-template-areas: "img" "txt";
+  }
+  #body .container--full-page .main .see-our-history .img {
+    margin-bottom: 3rem;
+    max-width: 600px;
+    display: flex;
+    justify-self: center;
+  }
+  #body .container--full-page .main .see-our-history .our-history-text .h4 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+  #body .container--full-page .main .see-our-history .our-history-text .p {
+    font-size: 2rem;
+  }
+  #body .container--full-page .footer--top-part::after {
     content: "";
     width: 100%;
     height: 0.2rem;
@@ -649,38 +678,37 @@ body {
   }
 }
 @media (max-width: 750px) {
-  #body .container--hero-text-and-btn {
-    top: 18rem;
+  #body .container--full-page .container--hero-text-and-btn {
     margin-left: 4.5rem;
   }
-  #body .container--hero-text-and-btn .h1 {
+  #body .container--full-page .container--hero-text-and-btn .h1 {
     font-size: 4.4rem;
   }
-  #body .container--hero-text-and-btn p {
+  #body .container--full-page .container--hero-text-and-btn p {
     font-size: 2.4rem;
     margin-bottom: 4rem;
   }
-  #body .how-it-works img {
+  #body .container--full-page .how-it-works img {
     width: 95%;
   }
-  #body #cards-about-us--query {
+  #body .container--full-page #cards-about-us--query {
     grid-template-columns: 35rem;
     row-gap: 4rem;
   }
-  #body #icon-menu--query {
+  #body .container--full-page #icon-menu--query {
     z-index: 9999;
   }
-  #body #icon-menu--query .mobile-menu.active {
+  #body .container--full-page #icon-menu--query .mobile-menu.active {
     display: block;
     color: #EDE8E8;
   }
-  #body #icon-menu--query:hover {
+  #body .container--full-page #icon-menu--query:hover {
     cursor: pointer;
   }
-  #body .main-nav {
+  #body .container--full-page .main-nav {
     position: absolute;
   }
-  #body .main-nav .main-nav--ul {
+  #body .container--full-page .main-nav .main-nav--ul {
     background-color: rgba(0, 0, 0, 0.896);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -699,145 +727,180 @@ body {
     transform: translate(-50%, -50%);
     backdrop-filter: blur(20px);
   }
-  #body .main-nav .main-nav--ul.active {
+  #body .container--full-page .main-nav .main-nav--ul.active {
     left: 50%;
   }
-  #body .container--form--full .div {
+  #body .container--full-page .container--form--full .div {
     padding: 0 5rem 20rem 5rem;
-    top: 400px;
+    top: 50%;
   }
-  #body .container--form--full .div .h2 {
+  #body .container--full-page .container--form--full .div .h2 {
     margin-bottom: 2rem;
   }
-  #body .container--form--full .div .container--progress-steps {
+  #body .container--full-page .container--form--full .div .container--progress-steps {
     flex-direction: column;
     margin-bottom: 2rem;
   }
-  #body .container--form--full .div .container--progress-steps .container--steps:not(:last-child) {
+  #body .container--full-page .container--form--full .div .container--progress-steps .container--steps:not(:last-child) {
     margin-bottom: 20px;
   }
-  #body .container--form--full .div .container--progress-steps .container--steps:not(:last-child)::after {
+  #body .container--full-page .container--form--full .div .container--progress-steps .container--steps:not(:last-child)::after {
     height: 0;
     width: 0;
   }
-  #body .container--form--full .div .container--progress-steps .container--steps .step-number {
+  #body .container--full-page .container--form--full .div .container--progress-steps .container--steps .step-number {
     position: relative;
   }
-  #body .container--form--full .div .container--progress-steps .container--steps .step-number:not(.no-style)::after {
+  #body .container--full-page .container--form--full .div .container--progress-steps .container--steps .step-number:not(.no-style)::after {
     content: "";
     width: 1px;
-    height: 25px;
+    height: 30px;
     background-color: #EDE8E8;
     position: absolute;
-    bottom: -122%;
+    top: 100%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: -1;
   }
-  #body .container--form--full .div .container--progress-steps .container--steps .step-number.active:not(.no-style)::after {
+  #body .container--full-page .container--form--full .div .container--progress-steps .container--steps .step-number.active:not(.no-style)::after {
     background-color: #141414;
   }
-  #body .container--form--full .div .container--your-info-form {
+  #body .container--full-page .container--form--full .div .container--your-info-form {
     padding-bottom: 0;
   }
-  #body .container--form--full .div .container--your-info-form .form fieldset, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset, #body .container--full-page .container--form--full .div .container--your-info-form .form .about-change--fieldset, #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset {
     grid-template-columns: 1fr;
   }
-  #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container input, #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container select, #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container textarea, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container input, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container select, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container textarea, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container input, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container select, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container textarea {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset .form-input-container input, #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset .form-input-container select, #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset .form-input-container textarea, #body .container--full-page .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container input, #body .container--full-page .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container select, #body .container--full-page .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container textarea, #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container input, #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container select, #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container textarea {
     width: 100% !important;
   }
-  #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container textarea, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container textarea, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container textarea {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset .form-input-container textarea, #body .container--full-page .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container textarea, #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container textarea {
     height: 80px;
   }
-  #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container .radio-btn, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container .radio-btn, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container .radio-btn {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset .form-input-container .radio-btn, #body .container--full-page .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container .radio-btn, #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container .radio-btn {
     flex-shrink: 0;
   }
-  #body .container--form--full .div .container--your-info-form .form fieldset .form-input-container .radio-btn span, #body .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container .radio-btn span, #body .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container .radio-btn span {
+  #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset .form-input-container .radio-btn span, #body .container--full-page .container--form--full .div .container--your-info-form .form .about-change--fieldset .form-input-container .radio-btn span, #body .container--full-page .container--form--full .div .container--your-info-form .form fieldset.user-info--fieldset .form-input-container .radio-btn span {
     flex-shrink: 0;
   }
-  #body .container--form--full .div .container--your-info-form .svg-finish svg {
+  #body .container--full-page .container--form--full .div .container--your-info-form .svg-finish svg {
     width: 12rem;
     height: 12rem;
     margin-bottom: 2rem;
   }
-  #body .container--form--full .div .container--your-info-form .svg-finish p {
+  #body .container--full-page .container--form--full .div .container--your-info-form .svg-finish p {
     margin-bottom: 1rem;
     font-size: 1.9rem;
     font-weight: 700;
     line-height: 2.28rem;
   }
-  #body .footer {
+  #body .container--full-page .footer {
     padding: 5rem 1.5rem;
   }
 }
 @media (max-width: 654px) {
-  #body .hero {
+  #body .container--full-page .hero {
     text-align: center;
   }
-  #body .hero .container--hero-text-and-btn {
+  #body .container--full-page .hero .container--hero-text-and-btn {
     width: 100%;
     margin: auto;
   }
-  #body .hero .container--hero-text-and-btn .h1 {
+  #body .container--full-page .hero .container--hero-text-and-btn .h1 {
     font-size: 3.8rem;
   }
-  #body .hero .container--hero-text-and-btn p {
+  #body .container--full-page .hero .container--hero-text-and-btn p {
     font-size: 1.8rem;
   }
-  #body .hero .container--hero-img img {
+  #body .container--full-page .hero .container--hero-img img {
     height: 445px;
   }
-  #body .how-it-works .h2 {
+  #body .container--full-page .how-it-works .h2 {
     margin-bottom: 5rem;
   }
-  #body .how-it-works img {
+  #body .container--full-page .how-it-works img {
     width: 95%;
     max-width: 277px;
     margin-bottom: 5rem;
   }
-  #body .main .see-our-history {
-    grid-template-areas: "img" "txt";
-  }
-  #body .footer--top-part {
+  #body .container--full-page .footer--top-part {
     grid-template-areas: "lf lf" "md rt";
     place-content: center;
     row-gap: 3rem;
   }
-  #body .footer--top-part::after {
+  #body .container--full-page .footer--top-part::after {
     bottom: 0;
   }
-  #body .footer--top-part aside .logo {
+  #body .container--full-page .footer--top-part aside .logo {
     text-align: center;
   }
-  #body .footer--top-part aside .form {
+  #body .container--full-page .footer--top-part aside .form {
     width: 100%;
   }
-  #body .footer--top-part aside .form p label {
+  #body .container--full-page .footer--top-part aside .form p label {
     font-size: 2.6rem;
   }
-  #body .footer--top-part aside .form p .email-input {
+  #body .container--full-page .footer--top-part aside .form p .email-input {
     font-size: 2.6rem;
     width: 100%;
   }
-  #body .footer--top-part aside::after {
+  #body .container--full-page .footer--top-part aside::after {
     content: "";
     width: 0;
     height: 0;
   }
-  #body .footer-bottom-part {
+  #body .container--full-page .footer-bottom-part {
     flex-wrap: wrap;
     row-gap: 2rem;
     column-gap: 2rem;
   }
 }
 @media (max-width: 380px) {
-  #body .header {
-    padding: 3.5rem 5rem;
+  #body .container--full-page .header {
+    padding: 2rem 4.5rem;
   }
-  #body .container--form--full .div {
+  #body .container--full-page .container--form--full .div {
     padding: 0 0.5rem 20rem 0.5rem;
+  }
+  #body .container--full-page .main .see-our-history {
+    grid-template-areas: "img" "txt";
+  }
+  #body .container--full-page .main .see-our-history .img {
+    margin-bottom: 3rem;
+    max-width: 600px;
+    display: flex;
+    justify-self: center;
+  }
+  #body .container--full-page .main .see-our-history .our-history-text .h4 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+  }
+  #body .container--full-page .main .see-our-history .our-history-text .p {
+    font-size: 1.8rem;
   }
   .radio-btn span label {
     margin-left: 0 !important;
+  }
+}
+@media (max-width: 350px) {
+  #body .container--full-page .footer .footer--top-part .form p label {
+    font-size: 2.4rem;
+  }
+  #body .container--full-page .footer .footer--top-part .footer-top-text .h4 {
+    font-size: 1.6rem;
+  }
+  #body .container--full-page .footer .footer--top-part .footer-top-text .nav ul .li a {
+    font-size: 1.4rem;
+  }
+}
+@media (max-height: 700px) and (max-width: 750px) {
+  #body .container--full-page .container--form--full .div {
+    top: 80%;
+  }
+  #body .container--full-page .container--form--full .div .container--btns {
+    flex-direction: row;
+    column-gap: 5rem;
+    top: 85%;
+    left: 50%;
   }
 }
 

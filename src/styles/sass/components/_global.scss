@@ -28,8 +28,12 @@ body{
   background-color: #FFFAFF;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
+#container--full-page{
+  position: relative;
+}
 .text{
   font-family: 'Roboto', sans-serif;
 }

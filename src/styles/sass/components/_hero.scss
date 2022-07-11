@@ -2,12 +2,14 @@
 @use "variables" as vrb;
 
 .hero{
-  
+  position: relative;
 
  @include maxWidth192;
   
 
   .container--hero-img{
+
+    
 
     -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 77%, 0 98%);
     clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 77%, 0 98%);
@@ -23,7 +25,11 @@
 
     position: absolute;
     margin-left: 9rem;
-    top: 26rem;
+    top: 50%;
+    right: 0;
+    left: 0;
+    // bottom: 0;
+    transform: translate(0,-50%);
 
     .h1{
       font-weight: 700; //variavel
