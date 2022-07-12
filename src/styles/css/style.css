@@ -461,6 +461,7 @@ body {
 .footer {
   background-color: #363837;
   padding: 5rem 9rem;
+  margin-bottom: 4rem;
 }
 .footer .footer--top-part {
   display: grid;
@@ -570,6 +571,63 @@ body {
   font-size: 1.9rem;
 }
 
+.container--team-work h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.container--team-work .both-authors-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  position: relative;
+}
+.container--team-work .both-authors-section::before {
+  content: "";
+  width: 1px;
+  height: calc(100% - 40px);
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.container--team-work .both-authors-section .author-section {
+  text-align: center;
+}
+.container--team-work .both-authors-section .author-section .encapsulate-profile-img {
+  width: 19rem;
+  height: 19rem;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto 2rem auto;
+}
+.container--team-work .both-authors-section .author-section .encapsulate-profile-img.mi {
+  background-image: url(/public/images/milena-campos.jpeg);
+}
+.container--team-work .both-authors-section .author-section .encapsulate-profile-img.lf {
+  background-image: url(/public/images/luiz-felipe.jpeg);
+}
+.container--team-work .both-authors-section .author-section h3 {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 27px;
+  margin-bottom: 5px;
+}
+.container--team-work .both-authors-section .author-section h4 {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 23px;
+  margin-bottom: 15px;
+}
+.container--team-work .both-authors-section .author-section .social-media-icons {
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+  margin-bottom: 40px;
+}
 @media (max-width: 1445px) {
   #body .container--full-page .container--form--full .div {
     max-width: 1270px;
@@ -597,6 +655,9 @@ body {
 @media (max-width: 1285px) {
   html {
     font-size: 56%;
+  }
+  #body .container--full-page .main .see-our-history {
+    padding: 0 3rem;
   }
   #body .container--full-page .container--form--full .div {
     max-width: 940px;
@@ -678,6 +739,9 @@ body {
   }
 }
 @media (max-width: 750px) {
+  #body .container--full-page .header {
+    padding: 2rem 4.5rem;
+  }
   #body .container--full-page .container--hero-text-and-btn {
     margin-left: 4.5rem;
   }
@@ -853,11 +917,18 @@ body {
     row-gap: 2rem;
     column-gap: 2rem;
   }
+  #body .container--team-work .both-authors-section {
+    grid-template-columns: 1fr;
+  }
+  #body .container--team-work .both-authors-section::before {
+    height: 0;
+    width: 0;
+  }
+  #body .container--team-work .both-authors-section .author-section.mi {
+    margin-bottom: 4rem;
+  }
 }
 @media (max-width: 380px) {
-  #body .container--full-page .header {
-    padding: 2rem 4.5rem;
-  }
   #body .container--full-page .container--form--full .div {
     padding: 0 0.5rem 20rem 0.5rem;
   }
@@ -890,6 +961,11 @@ body {
   }
   #body .container--full-page .footer .footer--top-part .footer-top-text .nav ul .li a {
     font-size: 1.4rem;
+  }
+}
+@media (max-width: 300px) {
+  html {
+    font-size: 38%;
   }
 }
 @media (max-height: 700px) and (max-width: 750px) {

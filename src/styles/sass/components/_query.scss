@@ -65,6 +65,15 @@
 
     .container--full-page{
 
+      .main{
+
+        .see-our-history{
+          
+          padding: 0 3rem;
+        }
+      }
+      
+
       .container--form--full{
 
         .div{
@@ -234,7 +243,14 @@
 
   #body{
 
+
+
     .container--full-page{
+
+      .header{
+        padding: 2rem 4.5rem;
+      }
+      
       .container--hero-text-and-btn{
       
         margin-left: 4.5rem;
@@ -514,6 +530,22 @@
         column-gap: 2rem;
       }
     }
+
+    .container--team-work{
+
+      .both-authors-section{
+        grid-template-columns: 1fr;
+
+        &::before{
+          height: 0;
+          width: 0;
+        }
+
+        .author-section.mi{
+          margin-bottom: 4rem;
+        }
+      }
+    }
  
   }
 }
@@ -526,9 +558,7 @@
   #body{
     .container--full-page{
 
-      .header{
-        padding: 2rem 4.5rem;
-      }
+      
   
       .container--form--full{
   
@@ -610,6 +640,17 @@
       }
     }
   }
+}
+
+@media (max-width: 300px) {
+
+  html{
+    font-size: 38%;
+  }
+
+ 
+  
+  
 }
 
 
